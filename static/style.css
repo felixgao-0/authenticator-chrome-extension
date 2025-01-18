@@ -1,0 +1,20 @@
+#progress-bar {
+    width: 0%;
+    height: 15px;
+    background-color: gray;
+
+    -webkit-transition: width 0.5s ease-in-out;
+    -moz-transition: width 0.5s ease-in-out;
+    -o-transition: width 0.5s ease-in-out;
+    transition: width 0.5s ease-in-out;
+}
+
+@keyframes flash {
+    0% { opacity: 1; }
+    50% { opacity: 0.1; }
+    100% { opacity: 1; }
+}
+
+.flash {
+    animation: flash 1s infinite;
+}

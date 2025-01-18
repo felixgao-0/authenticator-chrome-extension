@@ -1,0 +1,10 @@
+{
+    "name": "OTP Code Vault",
+    "description": "Easily get OTP codes on the web! Made with secure love :).",
+    "version": "1.0",
+    "manifest_version": 3,
+    "action": {
+      "default_popup": "index.html",
+      "default_icon": "icons/128.png"
+    }
+  }
