@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TOTP Generator</title>
+  
+  <link rel="stylesheet" href="static/style.css">
+  <script src="/static/otp_gen.js"></script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/@otplib/preset-browser@^12.0.0/buffer.js"></script>
+  <script src="https://unpkg.com/@otplib/preset-browser@^12.0.0/index.js"></script>
+
+</head>
+<body class="mx-5">
+  <div>
+    <h1 class="text-2xl m-1 font-sans">Authenticator</h1>
+  </div>
+  <div id="progress-container" class="bg-gray-300">
+    <div id="progress-bar"></div>
+  </div>
+  <div class="otp-container">
+    <div class="border-solid border-2 border-gray-400 rounded-lg p-2 my-2">
+      <p>GitHub</p>
+      <button id="code" class="copy-button text-2xl"></button>
+      <p>example@felixgao.dev</p>
+    </div>
+  </div>
+</body>
+</html>
