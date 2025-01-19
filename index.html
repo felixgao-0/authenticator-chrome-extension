@@ -6,25 +6,40 @@
   <title>TOTP Generator</title>
   
   <link rel="stylesheet" href="static/style.css">
-  <script src="/static/otp_gen.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/@otplib/preset-browser@^12.0.0/buffer.js"></script>
   <script src="https://unpkg.com/@otplib/preset-browser@^12.0.0/index.js"></script>
 
+  <script src="/static/otp_gen.js"></script>
+
 </head>
 <body class="mx-5">
-  <div>
-    <h1 class="text-2xl m-1 font-sans">Authenticator</h1>
-  </div>
-  <div id="progress-container" class="bg-gray-300">
-    <div id="progress-bar"></div>
+  <div class="flex place-content-between">
+    <h1 class="text-2xl ml-1 font-sans">Authenticator</h1>
+    <div class="flex space-x-1">
+      <button class="flex items-center" id="add-code-btn"><span class="material-symbols-outlined">add</span></button>
+      <button class="flex items-center" id="del-code-btn"><span class="material-symbols-outlined">delete</span></button>
+      <button class="flex items-center" id="settings-btn"><span class="material-symbols-outlined">settings</span></button>        
+    </div>
   </div>
   <div class="otp-container">
-    <div class="border-solid border-2 border-gray-400 rounded-lg p-2 my-2">
-      <p>GitHub</p>
-      <button id="code" class="copy-button text-2xl"></button>
-      <p>example@felixgao.dev</p>
+    <div class="border-solid border-2 border-gray-400 rounded-lg">
+      <div class="m-1">
+        <p>GitHub</p>
+        <div class="flex place-content-between">
+          <button id="code" class="copy-btn text-3xl">Loading...</button>
+          <div class="text-gray-500">
+            <p class="text-xs">Next:</p>
+            <button id="next-code" class="copy-btn text-xl">Loading...</button>
+          </div>
+        </div>
+        <p>example@felixgao.dev</p>
+      </div>
+      <div id="progress-container" class="bg-gray-300 -z-1 relative">
+        <div id="progress-bar" class="-z-1 relative"></div>
+      </div>
     </div>
   </div>
 </body>
