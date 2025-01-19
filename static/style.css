@@ -1,6 +1,6 @@
 #progress-bar {
     width: 0%;
-    height: 15px;
+    height: 5px;
     background-color: gray;
 
     -webkit-transition: width 0.5s ease-in-out;
